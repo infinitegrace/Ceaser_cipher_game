@@ -12,14 +12,14 @@ alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'
 #A single function that would do both encoding and decoding
 def ceaser(text, shift, encode_or_decode):
     display = ""
+    if direction == "decode":
+                shift *= -1
     for letter in text:
         if letter not in alphabet:
             display += letter
         else:
             letter_index = alphabet.index(letter)
-            if direction == "decode":
-                if shift >= 0:
-                    shift *= -1
+            
 
             shift_index = letter_index + shift
 
